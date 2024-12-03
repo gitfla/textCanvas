@@ -10,13 +10,18 @@
 #ifndef snippet_h
 #define snippet_h
 
+// represents how the particles in the snippet move
+enum movementMode {
+	STATIC = 0,
+	PULSING = 1,
+	CHAIN = 2
+};
+
 class snippet {
 public:
 	int fontSize;
-	bool pulse;
-	
+	movementMode mode;
 	glm::vec2 startPosition;
-	glm::vec3 color;
 	vector<particle> particles;
 	ofTrueTypeFont 	vagRounded;
 	
@@ -24,7 +29,7 @@ public:
 	void draw();
 	void clear();
 	
-	snippet(string text, glm::vec2, int fontSize, int particleSize, int movementMode, bool rainbow, bool changingColor);
+	snippet(string text, glm::vec2, int fontSize, int particleSize, movementMode movementMode, bool rainbow, bool changingColor);
 	~snippet();
 };
 

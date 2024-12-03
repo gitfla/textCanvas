@@ -95,7 +95,14 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-	snippet newSnippet(message, glm::vec2(x, y), fontSize, particleSize, movementMode, rainbow, changingColor);
+	snippet newSnippet(
+					   message,
+					   glm::vec2(x, y),
+					   fontSize,
+					   particleSize,
+					   static_cast<enum movementMode>(static_cast<int>(movementMode)),
+					   rainbow,
+					   changingColor);
 	snippets.push_back(newSnippet);
 }
 

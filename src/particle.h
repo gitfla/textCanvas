@@ -11,9 +11,15 @@
 
 class particle {
 public:
+	// isRoundtrip refers to whether particle should also make the reverse path to initial position
+	// changingColor refers to whether hue of particle should keep updating
 	bool isRoundtrip, changingColor;
+	
+	// radius of particle's circle
 	float size;
 	glm::vec2 startPosition, currentPosition, endPosition, direction;
+	
+	// stepsInCycle refers to how many iterations before particle reaches endPosition
 	int stepsInCycle, currentStep;
 	ofColor color;
 	

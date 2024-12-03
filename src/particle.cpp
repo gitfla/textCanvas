@@ -21,15 +21,15 @@ particle::particle(glm::vec2 start, glm::vec2 end, int steps, bool roundtrip, in
 
 void particle::update() {
 	// calculate current direction
-	float dir_x = float(endPosition[0] - startPosition[0])/stepsInCycle;
-	float dir_y = float(endPosition[1] - startPosition[1])/stepsInCycle;
+	float dirX = float(endPosition[0] - startPosition[0])/stepsInCycle;
+	float dirY = float(endPosition[1] - startPosition[1])/stepsInCycle;
 	
 	// if it's supposed to make the reverse path, check if halfway and go in opposite direction
 	if (isRoundtrip && (currentStep > (stepsInCycle/2))) {
-		dir_x = -1 * dir_x;
-		dir_y = -1 * dir_y;
+		dirX = -1 * dirX;
+		dirY = -1 * dirY;
 	}
-	direction = glm::vec2(dir_x, dir_y);
+	direction = glm::vec2(dirX, dirY);
 	
 	// update current state
 	currentPosition += direction;
