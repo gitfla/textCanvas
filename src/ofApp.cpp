@@ -8,22 +8,30 @@ void ofApp::setup(){
 
 	gui.setup("","", 20, 100);
 	gui.add(fontSize.setup("font size", 100, 30, 300));
-	//gui.add(floatSlider.setup("float slider", 30.0, 0.0, 300.0));
+	gui.add(particleSize.setup("particle size", 2, 1, 5));
+	gui.add(movementMode.setup("movement mode", 1, 0, 2));
+	gui.add(movementHeader.setup("", "movement modes"));
+	gui.add(movementZero.setup("0", "static"));
+	gui.add(movementOne.setup("1", "pulsing"));
+	gui.add(movementTwo.setup("2", "chain"));
 	
-	gui.add(toggle.setup("toggle", false));
-	//gui.add(button.setup("button"));
-		//gui.add(intField.setup("int field", 100, 0, 100));
-	//gui.add(floatField.setup("float field", 100.0, 0.0, 100.0));
-	gui.add(textField.setup("text field", "text"));
-	
-	
-	gui.add(vec3Slider.setup("text color", ofVec3f(100,1500,90), ofVec3f(0,0,0), ofVec3f(255,255,255)));
+	gui.add(rainbow.setup("RAINBOW!", false));
+	gui.add(changingColor.setup("changing color", true));
+
+	gui.add(clearHeader.setup("", "click to clear screen"));
+	gui.add(clear.setup("clear"));
 	
 	message = "start";
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
+	if (clear) {
+		for (int i=0; i<snippets.size();++i) {
+			snippets[i].clear();
+			snippets.clear();
+		}
+	}
 	for (int i=0; i<snippets.size();++i) {
 		snippets[i].update();
 	}
@@ -31,14 +39,9 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-	ofSetColor(vec3Slider->x, vec3Slider->y, vec3Slider->z);
-	//ofDrawCircle(ofGetWidth()/2, ofGetHeight() / 2, 128);
-	//ofSetCircleResolution(fontSize);
-
 	ofSetColor(184,180,176);
-	string outString = "-- Type snippet to add to screen --";
+	string outString = "-- Type message then click on screen --";
 	outString += "\n" + message;
-	outString += "\n------------------------------";
 	ofDrawBitmapString(outString, 20, 40);
 	
 	gui.draw();
@@ -66,6 +69,9 @@ void ofApp::keyPressed(int key){
 	} else if( key == OF_KEY_DOWN ) {
 	} else if( key < 300 ) {
 		unsigned char letter = (unsigned char)key;
+		
+		// limits snippet length
+		// TODO: add visual feedback
 		if (message.size() >= 15) {
 			return;
 		}
@@ -80,7 +86,6 @@ void ofApp::keyReleased(int key){
 
 //--------------------------------------------------------------
 void ofApp::mouseMoved(int x, int y ){
-
 }
 
 //--------------------------------------------------------------
@@ -90,7 +95,7 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-	snippet newSnippet(message, glm::vec2(x, y), vagRounded, fontSize, vec3Slider);
+	snippet newSnippet(message, glm::vec2(x, y), fontSize, particleSize, movementMode, rainbow, changingColor);
 	snippets.push_back(newSnippet);
 }
 

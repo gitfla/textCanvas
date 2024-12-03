@@ -7,22 +7,9 @@
 
 #include "snippet.h"
 
-snippet::snippet(string text, glm::vec2 start, ofTrueTypeFont vagRounded, int fontSize, glm::vec3 color) {
-	startPosition = start;
-	fontSize = fontSize;
-	
-	vagRounded.load("vag.ttf", fontSize, false, false, true, 0);
-
-	// get the string as paths
-	bool vflip = true; // OF flips y coordinate in the default perspective,
-	// should be false if using a camera for example
-	bool filled = false; // or false for contours
-	vector < ofPath > paths = vagRounded.getStringAsPoints(text, vflip, filled);
-	
-	cout << "paths: " << paths.size() << endl;
-	ofPushMatrix();
-	ofTranslate(startPosition[0],startPosition[1]);
-	
+// returns the minimum and maximum X and Y positions of the text displayed in paths
+// uses this return format because we use the min and max X for the rainbow case.
+vector<glm::vec2> getXYRanges(vector<ofPath> paths) {
 	float min_x = std::numeric_limits<float>::min();
 	float min_y = min_x;
 	float max_x = -min_x;
@@ -32,7 +19,7 @@ snippet::snippet(string text, glm::vec2 start, ofTrueTypeFont vagRounded, int fo
 		vector <ofPolyline> polylines = paths[i].getOutline();
 		
 		for (int j = 0; j < polylines.size(); j++){
-			for (int k = 0; k < polylines[j].size(); k+=1){
+			for (int k = 0; k < polylines[j].size(); k+=1) {
 				if (polylines[j][k][0] > max_x) {
 					max_x = polylines[j][k][0];
 				}
@@ -48,70 +35,83 @@ snippet::snippet(string text, glm::vec2 start, ofTrueTypeFont vagRounded, int fo
 			}
 		}
 	}
-	float center_word_x = (min_x + max_x) /2;
-	float center_word_y = (min_y + max_y) / 2;
+	return {glm::vec2(min_x, max_x), glm::vec2(min_y, max_y)};
+}
+
+// TODO: break each movement mode into different snippet class implementations
+snippet::snippet(string text, glm::vec2 start, int fontSize, int particleSize, int movementMode, bool rainbow, bool changingColor) {
+	startPosition = start;
+	fontSize = fontSize;
+	vagRounded.load("vag.ttf", fontSize, false, false, true, 0);
 	
+	// sets random color for the whole snippet
+	ofColor c;
+	c.set(ofRandom(255), ofRandom(255), ofRandom(255), 200);
+
+	// get the string as paths
+	bool vflip = true; // OF flips y coordinate in the default perspective,
+	// should be false if using a camera for example
+	bool filled = false; // or false for contours
+	vector<ofPath> paths = vagRounded.getStringAsPoints(text, vflip, filled);
+	
+	ofPushMatrix();
+	ofTranslate(startPosition[0],startPosition[1]);
+	
+	vector<glm::vec2> ranges = getXYRanges(paths);
+	glm::vec2 center = glm::vec2((ranges[0][0] + ranges[0][1])/2, (ranges[1][0] + ranges[1][1])/2);
 	
 	for (int i = 0; i < paths.size(); i++){
-		
 		// for every character break it out to polylines
-		
 		vector <ofPolyline> polylines = paths[i].getOutline();
 		cout << "polylines size: " << polylines.size() << endl;
 		
-		// for every polyline, draw every fifth point
-		
 		for (int j = 0; j < polylines.size(); j++){
+			// tries to get last point (at 100%) as the previous point for the first one
+			// TODO: deal with off-by-one
+			ofPoint previousPoint = polylines[j].getPointAtPercent(1);
+
 			
-			float sum_x = 0;
-			float sum_y = 0;
-			for (int k = 0; k < polylines[j].size(); k+=1){
-				sum_x += polylines[j][k][0];
-				sum_y += polylines[j][k][1];
-			}
-			float center_x = sum_x / polylines[j].size();
-			float center_y = sum_y / polylines[j].size();
 			for (int k = 0; k < polylines[j].size(); k+=5){         // draw every "fifth" point
-				//cout << "polylines[j][k]: " <<  polylines[j][k] << endl;
-				//ofDrawCircle( polylines[j][k], 2);
-				
 				float percent = float(k)/polylines[j].size();
-				float nextPercent;
-				if (k == 0) {
-					nextPercent = 1;
-				} else {
-					nextPercent = float(k-5)/polylines[j].size();
+				ofPoint point = polylines[j].getPointAtPercent(percent);
+				
+				// movementMode == 0 , static
+				float end_x = point[0];
+				float end_y = point[1];
+				
+				if (movementMode == 1) { // pulsing
+					end_x = point[0] + (point[0] - center[0]);
+					end_y = point[1] + (point[1] - center[1]);
 				}
 				
-				ofPoint point = polylines[j].getPointAtPercent(percent);
-				ofPoint nextPoint = polylines[j].getPointAtPercent(nextPercent);
-				glm::vec3 polyline = polylines[j][k];
-				
-				
-				
-				float mappedHue = 200 * float(point[0] - min_x) / (max_x - min_x);
-				float end_x = point[0] + (point[0] - center_word_x);
-				float end_y = point[1] + (point[1] - center_word_y);
-				
+				if (movementMode == 2) { // chain
+					end_x = previousPoint[0];
+					end_y = previousPoint[1];
+				}
+	
+				// if rainbow is selected, hue depends on X value of particle
+				if (rainbow) {
+					float mappedHue = 200 * float(point[0] - ranges[0][0]) / (ranges[0][1] - ranges[0][0]);
+					c.setHsb(mappedHue, 255, 255, 200);
+				}
 				particle newParticle(
 									 glm::vec2(point[0], point[1]),
-									 glm::vec2(nextPoint[0], nextPoint[1]),
-									 50,
-									 mappedHue,
-									 false);
-				/*particle newParticle(
-					glm::vec2(point[0], point[1]),
-					glm::vec2(center_x, center_y),
-					glm::vec2(center_word_x, center_word_y),
-					mappedHue);*/
+									 glm::vec2(end_x, end_y),
+									 200,
+									 movementMode == 1,
+									 particleSize,
+									 c,
+									 changingColor);
 				particles.push_back(newParticle);
-				//cout << "pushing back new particle" << endl;
+				
+				if (movementMode == 2) {
+					previousPoint = point;
+				}
 			}
 		}
 	}
 	ofPopMatrix();
 }
-
 
 void snippet::update() {
 	for (int i=0; i<particles.size();++i) {
@@ -126,6 +126,12 @@ void snippet::draw() {
 		particles[i].draw();
 	}
 	ofPopMatrix();
+}
+
+void snippet::clear() {
+	for (int i=0; i<particles.size();++i) {
+		particles[i].clear();
+	}
 }
 
 snippet::~snippet() {

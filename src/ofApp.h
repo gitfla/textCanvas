@@ -29,20 +29,20 @@ class ofApp : public ofBaseApp{
 	ofxPanel gui;
 	
 	ofxIntSlider fontSize;
-	ofxFloatSlider floatSlider;
-	ofxToggle toggle;
-	ofxButton button;
-//		ofxLabel label;
+	ofxIntSlider particleSize;
+	ofxIntSlider movementMode;
+	ofxToggle rainbow;
+	ofxToggle changingColor;
+
+	ofxLabel movementHeader;
+	ofxLabel movementZero;
+	ofxLabel movementOne;
+	ofxLabel movementTwo;
 	
-	ofxIntField intField;
-	ofxFloatField floatField;
-	ofxTextField textField;
-	
-	ofxVec3Slider vec3Slider;
+	ofxLabel clearHeader;
+	ofxButton clear;
 		
-		float counter;
-		ofTrueTypeFont 	vagRounded;
-		string message;
-		vector<snippet> snippets;
+	string message;
+	vector<snippet> snippets;
 };
 

@@ -11,17 +11,17 @@
 
 class particle {
 public:
+	bool isRoundtrip, changingColor;
 	float size;
 	glm::vec2 startPosition, currentPosition, endPosition, direction;
 	int stepsInCycle, currentStep;
 	ofColor color;
-	bool roundtrip;
 	
 	void update();
 	void draw();
+	void clear();
 	
-	particle(glm::vec2 start, glm::vec2 end, int steps, int hue, bool roundtrip);
-	particle(glm::vec2 start, glm::vec2 letterCenter, glm::vec2 wordCenter, int hue);
+	particle(glm::vec2 start, glm::vec2 end, int steps, bool roundtrip, int size, ofColor c, bool changingColor);
 	
 	~particle();
 };
