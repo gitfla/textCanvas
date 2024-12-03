@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		"06F9F42E-109B-4227-9C5E-8F86BD72A74D" /* ofxToggle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "FAF6C2B8-3D40-43F0-86F9-039984F5D323" /* ofxToggle.cpp */; };
+		"4E3C2E74-7B42-4749-ACD5-6C8DE52F4A82" /* ofxSliderGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "CC1288BB-86BE-4CC1-91E7-22E44A178905" /* ofxSliderGroup.cpp */; };
+		"4F23DB76-8E58-406F-A2D9-1B32375495DE" /* ofxInputField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "9E51D13F-B055-46EF-98FC-60010BA72B94" /* ofxInputField.cpp */; };
+		"5307EB2B-8EE6-411B-BB27-A55D21BB0002" /* ofxBaseGui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "7DD6BBCE-9C13-40BA-A1A0-C5346301B69D" /* ofxBaseGui.cpp */; };
+		"53303781-47D6-41B6-BD28-1BAAE2114153" /* ofxPanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "98384D4A-7552-4CD3-873A-BE8F740311F4" /* ofxPanel.cpp */; };
+		"55390370-76BD-40BA-87B1-AB174CCF335F" /* ofxGuiGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "5410541C-54CF-4E48-ACB9-BFA9FC272C43" /* ofxGuiGroup.cpp */; };
+		"5E138CB3-B741-449C-9AD4-8F031E2DFA7A" /* ofxColorPicker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "238FC005-4E32-49F2-8655-5528DB3FB94D" /* ofxColorPicker.cpp */; };
+		64FDDDD22CFE060D00FA4E32 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64FDDDCC2CFE060D00FA4E32 /* ofApp.cpp */; };
+		64FDDDD32CFE060D00FA4E32 /* particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64FDDDCD2CFE060D00FA4E32 /* particle.cpp */; };
+		64FDDDD42CFE060D00FA4E32 /* snippet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64FDDDCE2CFE060D00FA4E32 /* snippet.cpp */; };
+		64FDDDD52CFE060D00FA4E32 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64FDDDD12CFE060D00FA4E32 /* main.cpp */; };
+		"6F5CF31F-CBF5-4850-BE46-363E00765BBD" /* ofxLabel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "F65DBA11-7D82-4771-B385-389E40A7B7C6" /* ofxLabel.cpp */; };
+		"935A410C-5B9E-4558-A209-7BEE6CC92575" /* CreEPS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "864FD692-D80A-4B7E-BF18-7CE91B82DC72" /* CreEPS.cpp */; };
+		"A3EEDC1D-604C-420E-BCFC-0F7CFB55F71D" /* ofxSlider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "773FCD27-05C0-4689-927E-F424E64C69E7" /* ofxSlider.cpp */; };
+		"AD12286A-19AD-4EE5-9F16-14AD697C337B" /* ofxButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "F6336762-343A-49E2-8465-F4F16CD5894B" /* ofxButton.cpp */; };
+		"FBBC7C12-A1B5-433E-9CC9-9FB0C9DB9E51" /* ofxVectorGraphics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = "C1FCC2B8-657E-4E1E-A265-800E464B2EAC" /* ofxVectorGraphics.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E4A5B60F29BAAAE400C2D356 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4C2427710CC5ABF004149E2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		"10DE5284-A937-45C0-8423-EE54D8F73DD3" /* ofxColorPicker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxColorPicker.h; path = ../../addons/ofxGui/src/ofxColorPicker.h; sourceTree = SOURCE_ROOT; };
+		191CD6FA2847E21E0085CBB6 /* of.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = of.entitlements; sourceTree = "<group>"; };
+		191EF70929D778A400F35F26 /* openFrameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = openFrameworks; path = ../../libs/openFrameworks; sourceTree = SOURCE_ROOT; };
+		"1E84637A-D615-4FA5-9B2B-4CBF07100605" /* ofxInputField.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxInputField.h; path = ../../addons/ofxGui/src/ofxInputField.h; sourceTree = SOURCE_ROOT; };
+		"238FC005-4E32-49F2-8655-5528DB3FB94D" /* ofxColorPicker.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxColorPicker.cpp; path = ../../addons/ofxGui/src/ofxColorPicker.cpp; sourceTree = SOURCE_ROOT; };
+		"38E28F44-9AD7-4F30-9BCC-A7A34F27CBB0" /* CreEPS.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CreEPS.hpp; path = ../../addons/ofxVectorGraphics/libs/CreEPS.hpp; sourceTree = SOURCE_ROOT; };
+		"417B71FB-5DFF-4457-9411-00391094760C" /* ofxSlider.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxSlider.h; path = ../../addons/ofxGui/src/ofxSlider.h; sourceTree = SOURCE_ROOT; };
+		"5410541C-54CF-4E48-ACB9-BFA9FC272C43" /* ofxGuiGroup.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxGuiGroup.cpp; path = ../../addons/ofxGui/src/ofxGuiGroup.cpp; sourceTree = SOURCE_ROOT; };
+		64FDDDCB2CFE060D00FA4E32 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofApp.h; sourceTree = "<group>"; };
+		64FDDDCC2CFE060D00FA4E32 /* ofApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofApp.cpp; sourceTree = "<group>"; };
+		64FDDDCD2CFE060D00FA4E32 /* particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = particle.cpp; sourceTree = "<group>"; };
+		64FDDDCE2CFE060D00FA4E32 /* snippet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = snippet.cpp; sourceTree = "<group>"; };
+		64FDDDCF2CFE060D00FA4E32 /* snippet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snippet.h; sourceTree = "<group>"; };
+		64FDDDD02CFE060D00FA4E32 /* particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = particle.h; sourceTree = "<group>"; };
+		64FDDDD12CFE060D00FA4E32 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		"70D948F1-9749-4F49-9F09-212671F02053" /* ofxGuiUtils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxGuiUtils.h; path = ../../addons/ofxGui/src/ofxGuiUtils.h; sourceTree = SOURCE_ROOT; };
+		"72927C0D-D2E7-4E03-BB9F-28CC2161D0E6" /* ofxLabel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxLabel.h; path = ../../addons/ofxGui/src/ofxLabel.h; sourceTree = SOURCE_ROOT; };
+		"773FCD27-05C0-4689-927E-F424E64C69E7" /* ofxSlider.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxSlider.cpp; path = ../../addons/ofxGui/src/ofxSlider.cpp; sourceTree = SOURCE_ROOT; };
+		"7DD6BBCE-9C13-40BA-A1A0-C5346301B69D" /* ofxBaseGui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxBaseGui.cpp; path = ../../addons/ofxGui/src/ofxBaseGui.cpp; sourceTree = SOURCE_ROOT; };
+		"7FAB6F10-BED8-4FEC-8B4F-4C7A21055A65" /* ofxVectorGraphics.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxVectorGraphics.h; path = ../../addons/ofxVectorGraphics/src/ofxVectorGraphics.h; sourceTree = SOURCE_ROOT; };
+		"864FD692-D80A-4B7E-BF18-7CE91B82DC72" /* CreEPS.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = CreEPS.cpp; path = ../../addons/ofxVectorGraphics/libs/CreEPS.cpp; sourceTree = SOURCE_ROOT; };
+		"881B5501-5B0E-4B9B-839A-4DF271DB33DB" /* ofxToggle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxToggle.h; path = ../../addons/ofxGui/src/ofxToggle.h; sourceTree = SOURCE_ROOT; };
+		"98384D4A-7552-4CD3-873A-BE8F740311F4" /* ofxPanel.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxPanel.cpp; path = ../../addons/ofxGui/src/ofxPanel.cpp; sourceTree = SOURCE_ROOT; };
+		"9E51D13F-B055-46EF-98FC-60010BA72B94" /* ofxInputField.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxInputField.cpp; path = ../../addons/ofxGui/src/ofxInputField.cpp; sourceTree = SOURCE_ROOT; };
+		"9FED6ADA-159F-4BF5-A0F3-01F58E73FA64" /* ofxBaseGui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxBaseGui.h; path = ../../addons/ofxGui/src/ofxBaseGui.h; sourceTree = SOURCE_ROOT; };
+		"AB34200F-59B6-45E4-A055-05E8B72D3696" /* CreEPS_Types.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CreEPS_Types.hpp; path = ../../addons/ofxVectorGraphics/libs/CreEPS_Types.hpp; sourceTree = SOURCE_ROOT; };
+		"C1FCC2B8-657E-4E1E-A265-800E464B2EAC" /* ofxVectorGraphics.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxVectorGraphics.cpp; path = ../../addons/ofxVectorGraphics/src/ofxVectorGraphics.cpp; sourceTree = SOURCE_ROOT; };
+		"C9F88828-D698-444F-9D00-3FAE97DBA8E0" /* ofxGuiGroup.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxGuiGroup.h; path = ../../addons/ofxGui/src/ofxGuiGroup.h; sourceTree = SOURCE_ROOT; };
+		"CC1288BB-86BE-4CC1-91E7-22E44A178905" /* ofxSliderGroup.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxSliderGroup.cpp; path = ../../addons/ofxGui/src/ofxSliderGroup.cpp; sourceTree = SOURCE_ROOT; };
+		"D7D5E770-90EC-41DF-894B-DCF0F12B19BE" /* ofxGui.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxGui.h; path = ../../addons/ofxGui/src/ofxGui.h; sourceTree = SOURCE_ROOT; };
+		E4B69B5B0A3A1756003C02F2 /* textCanvasDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = textCanvasDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
+		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		"ECFE512F-BA22-48CD-8E86-93912815573D" /* ofxPanel.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxPanel.h; path = ../../addons/ofxGui/src/ofxPanel.h; sourceTree = SOURCE_ROOT; };
+		"F6336762-343A-49E2-8465-F4F16CD5894B" /* ofxButton.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxButton.cpp; path = ../../addons/ofxGui/src/ofxButton.cpp; sourceTree = SOURCE_ROOT; };
+		"F65DBA11-7D82-4771-B385-389E40A7B7C6" /* ofxLabel.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxLabel.cpp; path = ../../addons/ofxGui/src/ofxLabel.cpp; sourceTree = SOURCE_ROOT; };
+		"F97EA32E-0D3E-4EF1-9985-5DD194D284F1" /* ofxSliderGroup.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxSliderGroup.h; path = ../../addons/ofxGui/src/ofxSliderGroup.h; sourceTree = SOURCE_ROOT; };
+		"FAF6C2B8-3D40-43F0-86F9-039984F5D323" /* ofxToggle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ofxToggle.cpp; path = ../../addons/ofxGui/src/ofxToggle.cpp; sourceTree = SOURCE_ROOT; };
+		"FD47A544-BA79-4889-9ED0-5749FE31070A" /* ofxButton.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ofxButton.h; path = ../../addons/ofxGui/src/ofxButton.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4B69B590A3A1756003C02F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		"61E97D79-3BAF-4A39-BCF0-95142F0BB84C" /* ofxVectorGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				"EA458EFE-0FEF-435B-8A0E-F0A06E205BA2" /* libs */,
+				"FA8D7002-6267-4002-AA24-01195086EDE9" /* src */,
+			);
+			name = ofxVectorGraphics;
+			sourceTree = SOURCE_ROOT;
+		};
+		"933C1B97-FF7E-4C01-8250-F3F991A01C3C" /* ofxGui */ = {
+			isa = PBXGroup;
+			children = (
+				"CE406107-1F43-4B4C-9126-9A0DF19797EA" /* src */,
+			);
+			name = ofxGui;
+			sourceTree = SOURCE_ROOT;
+		};
+		BB4B014C10F69532006C3DED /* addons */ = {
+			isa = PBXGroup;
+			children = (
+				"933C1B97-FF7E-4C01-8250-F3F991A01C3C" /* ofxGui */,
+				"61E97D79-3BAF-4A39-BCF0-95142F0BB84C" /* ofxVectorGraphics */,
+			);
+			name = addons;
+			path = ../../addons;
+			sourceTree = "<group>";
+		};
+		"CE406107-1F43-4B4C-9126-9A0DF19797EA" /* src */ = {
+			isa = PBXGroup;
+			children = (
+				"7DD6BBCE-9C13-40BA-A1A0-C5346301B69D" /* ofxBaseGui.cpp */,
+				"9FED6ADA-159F-4BF5-A0F3-01F58E73FA64" /* ofxBaseGui.h */,
+				"F6336762-343A-49E2-8465-F4F16CD5894B" /* ofxButton.cpp */,
+				"FD47A544-BA79-4889-9ED0-5749FE31070A" /* ofxButton.h */,
+				"238FC005-4E32-49F2-8655-5528DB3FB94D" /* ofxColorPicker.cpp */,
+				"10DE5284-A937-45C0-8423-EE54D8F73DD3" /* ofxColorPicker.h */,
+				"D7D5E770-90EC-41DF-894B-DCF0F12B19BE" /* ofxGui.h */,
+				"5410541C-54CF-4E48-ACB9-BFA9FC272C43" /* ofxGuiGroup.cpp */,
+				"C9F88828-D698-444F-9D00-3FAE97DBA8E0" /* ofxGuiGroup.h */,
+				"70D948F1-9749-4F49-9F09-212671F02053" /* ofxGuiUtils.h */,
+				"9E51D13F-B055-46EF-98FC-60010BA72B94" /* ofxInputField.cpp */,
+				"1E84637A-D615-4FA5-9B2B-4CBF07100605" /* ofxInputField.h */,
+				"F65DBA11-7D82-4771-B385-389E40A7B7C6" /* ofxLabel.cpp */,
+				"72927C0D-D2E7-4E03-BB9F-28CC2161D0E6" /* ofxLabel.h */,
+				"98384D4A-7552-4CD3-873A-BE8F740311F4" /* ofxPanel.cpp */,
+				"ECFE512F-BA22-48CD-8E86-93912815573D" /* ofxPanel.h */,
+				"773FCD27-05C0-4689-927E-F424E64C69E7" /* ofxSlider.cpp */,
+				"417B71FB-5DFF-4457-9411-00391094760C" /* ofxSlider.h */,
+				"CC1288BB-86BE-4CC1-91E7-22E44A178905" /* ofxSliderGroup.cpp */,
+				"F97EA32E-0D3E-4EF1-9985-5DD194D284F1" /* ofxSliderGroup.h */,
+				"FAF6C2B8-3D40-43F0-86F9-039984F5D323" /* ofxToggle.cpp */,
+				"881B5501-5B0E-4B9B-839A-4DF271DB33DB" /* ofxToggle.h */,
+			);
+			name = src;
+			sourceTree = SOURCE_ROOT;
+		};
+		E4B69B4A0A3A1720003C02F2 = {
+			isa = PBXGroup;
+			children = (
+				191CD6FA2847E21E0085CBB6 /* of.entitlements */,
+				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
+				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
+				E4B69E1C0A3A1BDC003C02F2 /* src */,
+				191EF70929D778A400F35F26 /* openFrameworks */,
+				BB4B014C10F69532006C3DED /* addons */,
+				E4B69B5B0A3A1756003C02F2 /* textCanvasDebug.app */,
+			);
+			sourceTree = "<group>";
+		};
+		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				64FDDDD12CFE060D00FA4E32 /* main.cpp */,
+				64FDDDCC2CFE060D00FA4E32 /* ofApp.cpp */,
+				64FDDDCB2CFE060D00FA4E32 /* ofApp.h */,
+				64FDDDCD2CFE060D00FA4E32 /* particle.cpp */,
+				64FDDDD02CFE060D00FA4E32 /* particle.h */,
+				64FDDDCE2CFE060D00FA4E32 /* snippet.cpp */,
+				64FDDDCF2CFE060D00FA4E32 /* snippet.h */,
+			);
+			path = src;
+			sourceTree = SOURCE_ROOT;
+		};
+		"EA458EFE-0FEF-435B-8A0E-F0A06E205BA2" /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				"864FD692-D80A-4B7E-BF18-7CE91B82DC72" /* CreEPS.cpp */,
+				"38E28F44-9AD7-4F30-9BCC-A7A34F27CBB0" /* CreEPS.hpp */,
+				"AB34200F-59B6-45E4-A055-05E8B72D3696" /* CreEPS_Types.hpp */,
+			);
+			name = libs;
+			sourceTree = SOURCE_ROOT;
+		};
+		"FA8D7002-6267-4002-AA24-01195086EDE9" /* src */ = {
+			isa = PBXGroup;
+			children = (
+				"C1FCC2B8-657E-4E1E-A265-800E464B2EAC" /* ofxVectorGraphics.cpp */,
+				"7FAB6F10-BED8-4FEC-8B4F-4C7A21055A65" /* ofxVectorGraphics.h */,
+			);
+			name = src;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E4B69B5A0A3A1756003C02F2 /* textCanvas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "textCanvas" */;
+			buildPhases = (
+				E42962A92163ECCD00A6A9E2 /* Run Script — Compile OF */,
+				E4B69B580A3A1756003C02F2 /* Sources */,
+				E4B69B590A3A1756003C02F2 /* Frameworks */,
+				E4C2427710CC5ABF004149E2 /* CopyFiles */,
+				E4A5B60F29BAAAE400C2D356 /* CopyFiles */,
+				19B789C429E5AB4A0082E9B8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = textCanvas;
+			productName = myOFApp;
+			productReference = E4B69B5B0A3A1756003C02F2 /* textCanvasDebug.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1540;
+			};
+			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "textCanvas" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E4B69B4A0A3A1720003C02F2;
+			productRefGroup = E4B69B4A0A3A1720003C02F2;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E4B69B5A0A3A1756003C02F2 /* textCanvas */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19B789C429E5AB4A0082E9B8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$OF_PATH/scripts/osx/xcode_project.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E42962A92163ECCD00A6A9E2 /* Run Script — Compile OF */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script — Compile OF";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"💾 Compiling Openframeworks\"\nxcodebuild -project \"$OF_PATH/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj\" -target openFrameworks -configuration \"${CONFIGURATION}\"  CLANG_CXX_LANGUAGE_STANDARD=$CLANG_CXX_LANGUAGE_STANDARD MACOSX_DEPLOYMENT_TARGET=$MACOSX_DEPLOYMENT_TARGET GCC_PREPROCESSOR_DEFINITIONS=$USER_PREPROCESSOR_DEFINITIONS\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4B69B580A3A1756003C02F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				"5307EB2B-8EE6-411B-BB27-A55D21BB0002" /* ofxBaseGui.cpp in Sources */,
+				64FDDDD42CFE060D00FA4E32 /* snippet.cpp in Sources */,
+				64FDDDD32CFE060D00FA4E32 /* particle.cpp in Sources */,
+				"AD12286A-19AD-4EE5-9F16-14AD697C337B" /* ofxButton.cpp in Sources */,
+				"5E138CB3-B741-449C-9AD4-8F031E2DFA7A" /* ofxColorPicker.cpp in Sources */,
+				"55390370-76BD-40BA-87B1-AB174CCF335F" /* ofxGuiGroup.cpp in Sources */,
+				"4F23DB76-8E58-406F-A2D9-1B32375495DE" /* ofxInputField.cpp in Sources */,
+				"6F5CF31F-CBF5-4850-BE46-363E00765BBD" /* ofxLabel.cpp in Sources */,
+				"53303781-47D6-41B6-BD28-1BAAE2114153" /* ofxPanel.cpp in Sources */,
+				"A3EEDC1D-604C-420E-BCFC-0F7CFB55F71D" /* ofxSlider.cpp in Sources */,
+				"4E3C2E74-7B42-4749-ACD5-6C8DE52F4A82" /* ofxSliderGroup.cpp in Sources */,
+				"06F9F42E-109B-4227-9C5E-8F86BD72A74D" /* ofxToggle.cpp in Sources */,
+				64FDDDD22CFE060D00FA4E32 /* ofApp.cpp in Sources */,
+				"935A410C-5B9E-4558-A209-7BEE6CC92575" /* CreEPS.cpp in Sources */,
+				64FDDDD52CFE060D00FA4E32 /* main.cpp in Sources */,
+				"FBBC7C12-A1B5-433E-9CC9-9FB0C9DB9E51" /* ofxVectorGraphics.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E4B69B4E0A3A1720003C02F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = of.entitlements;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+				);
+				OTHER_CPLUSPLUSFLAGS = "-D__MACOSX_CORE__";
+			};
+			name = Debug;
+		};
+		E4B69B4F0A3A1720003C02F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = of.entitlements;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_UNROLL_LOOPS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+				);
+				OTHER_CPLUSPLUSFLAGS = "-D__MACOSX_CORE__";
+			};
+			name = Release;
+		};
+		E4B69B600A3A1757003C02F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_DYNAMIC_NO_PIC = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+					../../addons/ofxGui/src,
+					../../addons/ofxVectorGraphics/libs,
+					../../addons/ofxVectorGraphics/src,
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_LIBS)",
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(LIB_OF_DEBUG)",
+				);
+			};
+			name = Debug;
+		};
+		E4B69B610A3A1757003C02F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					src,
+					../../addons/ofxGui/src,
+					../../addons/ofxVectorGraphics/libs,
+					../../addons/ofxVectorGraphics/src,
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = (
+					"$(OF_CORE_LIBS)",
+					"$(OF_CORE_FRAMEWORKS)",
+					"$(LIB_OF)",
+				);
+				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "textCanvas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B69B4E0A3A1720003C02F2 /* Debug */,
+				E4B69B4F0A3A1720003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "textCanvas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B69B600A3A1757003C02F2 /* Debug */,
+				E4B69B610A3A1757003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4B69B4C0A3A1720003C02F2 /* Project object */;
+}
