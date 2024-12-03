@@ -35,16 +35,18 @@ void ofApp::draw(){
 	//ofDrawCircle(ofGetWidth()/2, ofGetHeight() / 2, 128);
 	//ofSetCircleResolution(fontSize);
 
-	gui.draw();
-	for (int i=0; i<snippets.size();++i) {
-		snippets[i].draw();
-	}
-	
 	ofSetColor(184,180,176);
 	string outString = "-- Type snippet to add to screen --";
 	outString += "\n" + message;
 	outString += "\n------------------------------";
 	ofDrawBitmapString(outString, 20, 40);
+	
+	gui.draw();
+	
+	for (int i=0; i<snippets.size();++i) {
+		snippets[i].draw();
+	}
+
 }
 
 //--------------------------------------------------------------
@@ -64,6 +66,9 @@ void ofApp::keyPressed(int key){
 	} else if( key == OF_KEY_DOWN ) {
 	} else if( key < 300 ) {
 		unsigned char letter = (unsigned char)key;
+		if (message.size() >= 15) {
+			return;
+		}
 		message += (letter);
 	}
 

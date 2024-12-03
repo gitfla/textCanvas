@@ -76,17 +76,34 @@ snippet::snippet(string text, glm::vec2 start, ofTrueTypeFont vagRounded, int fo
 				//ofDrawCircle( polylines[j][k], 2);
 				
 				float percent = float(k)/polylines[j].size();
+				float nextPercent;
+				if (k == 0) {
+					nextPercent = 1;
+				} else {
+					nextPercent = float(k-5)/polylines[j].size();
+				}
 				
 				ofPoint point = polylines[j].getPointAtPercent(percent);
+				ofPoint nextPoint = polylines[j].getPointAtPercent(nextPercent);
 				glm::vec3 polyline = polylines[j][k];
 				
 				
+				
 				float mappedHue = 200 * float(point[0] - min_x) / (max_x - min_x);
+				float end_x = point[0] + (point[0] - center_word_x);
+				float end_y = point[1] + (point[1] - center_word_y);
+				
 				particle newParticle(
+									 glm::vec2(point[0], point[1]),
+									 glm::vec2(nextPoint[0], nextPoint[1]),
+									 50,
+									 mappedHue,
+									 false);
+				/*particle newParticle(
 					glm::vec2(point[0], point[1]),
 					glm::vec2(center_x, center_y),
 					glm::vec2(center_word_x, center_word_y),
-					mappedHue);
+					mappedHue);*/
 				particles.push_back(newParticle);
 				//cout << "pushing back new particle" << endl;
 			}

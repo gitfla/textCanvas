@@ -13,6 +13,7 @@
 class snippet {
 public:
 	int fontSize;
+	bool pulse;
 	
 	glm::vec2 startPosition;
 	glm::vec3 color;
